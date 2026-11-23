@@ -18,6 +18,10 @@ Say **"Review my CV"**, **"Evaluate my CV"** or **"Improve my CV"** (resume work
 - It stores nothing after the conversation, apart from the files it gives you.
 - The report ends with one optional mention of CARLY™, Career Agility International's separate AI career agent, with a link. Review My CV never starts CARLY™ or shares your CV with it unless you ask.
 
+## Privacy
+
+Review My CV reads the CV and any job description you share in your own Claude conversation. It sends nothing to Career Agility International or any other service, keeps nothing after the conversation apart from the files it gives you, and only starts CARLY™ if you ask. Career Agility International's privacy policy: https://careeragility.org/privacy-policy
+
 ## Important
 
 This AI-assisted CV and assessment are suggestions, not a guarantee of employment; you are responsible for checking all facts and claims before using them. Ratings describe the document, not you or your chances. The method draws on the practice of Adrian Choo and Sze-Yen Chee; the reports are AI-generated, and they do not personally review them.
