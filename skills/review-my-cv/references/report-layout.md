@@ -26,7 +26,7 @@ Fit sentences: Weak, "X of Y requirements are not shown in your CV, including wh
 
 ## Report page furniture
 
-- **Header (every page except the first):** `assets/cai-logo.png` on the left, about 2.5" wide, keeping its proportions; on the right, in small slate capitals with wide letter spacing, "REVIEW MY CV · ASSESSMENT" followed by " · <CANDIDATE NAME IN CAPITALS>" when a name was supplied; a thin divider line under it. **First page:** the logo only.
+- **Header (every page except the first):** the Career Agility International logo image from this skill's assets folder (the file named cai-logo, PNG) on the left, about 2.5" wide, keeping its proportions; on the right, in small slate capitals with wide letter spacing, "REVIEW MY CV · ASSESSMENT" followed by " · <CANDIDATE NAME IN CAPITALS>" when a name was supplied; a thin divider line under it. **First page:** the logo only.
 - **Footer (every page), required word for word:** "© <year> Career Agility International Pte Ltd. Review My CV v1.0.1. AI-assisted.  Contact: info@CareerAgility.org", 7 pt slate, with a thin divider above and "Page N" right-aligned on every page except the first.
 
 ## Report building blocks
