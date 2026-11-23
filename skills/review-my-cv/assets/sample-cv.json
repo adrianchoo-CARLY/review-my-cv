@@ -1,0 +1,26 @@
+{
+ "name": "Marcus Lim",
+ "headline": "Supply Chain Director | Procurement and Supplier Strategy | Asia Pacific",
+ "contact": ["Singapore", "+65 9123 4567", "marcus.lim@email.com", "linkedin.com/in/marcuslim-sc"],
+ "profile": "Supply chain director with 18 years in consumer goods across Singapore and Southeast Asia. Currently leads end-to-end supply chain for a S$400 million consumer business, with a team of 60. Earlier spent eight years in regional procurement, leading category strategy and supplier consolidation across six Asian markets. Known for turning fragmented supply bases into fewer, stronger partnerships, and for cost programmes that hold up after the savings are booked.",
+ "key_skills": ["Category management", "Strategic sourcing", "Supplier relationship management", "Sales and operations planning", "Procurement negotiation", "Supply chain network design"],
+ "experience": [
+  {"title": "Supply Chain Director", "employer": "Harbour Foods Pte Ltd", "location": "Singapore", "dates": "2019 to present",
+   "scope": "Leads planning, procurement, manufacturing logistics and distribution for a S$400 million business. Team of 60 across Singapore and Malaysia. Reports to the Managing Director.",
+   "bullets": ["Consolidated 140 packaging and ingredient suppliers to 55, reducing annual material cost by 7% while keeping on-time-in-full above 95%.",
+               "Introduced monthly sales and operations planning, cutting finished-goods inventory from 52 to 38 days.",
+               "Led the selection and roll-out of a new warehouse management system across two distribution centres, completed on schedule in 2022."]},
+  {"title": "Operations Manager", "employer": "Harbour Foods Pte Ltd", "location": "Singapore", "dates": "2016 to 2019",
+   "scope": "Ran the Singapore plant's production planning and warehouse operations. Team of 25.",
+   "bullets": ["Redesigned shift scheduling, raising line utilisation from 71% to 80%.",
+               "Member of the team that reduced customer complaints by 30% through a new quality checkpoint."]}
+ ],
+ "earlier_career": [
+  {"title": "Regional Procurement Manager, Asia", "employer": "Lumina Consumer Products", "location": "Singapore", "dates": "2008 to 2016",
+   "scope": "Led procurement for packaging and raw materials across six Asian markets. Managed annual spend of about US$120 million and a team of eight category buyers.",
+   "bullets": ["Built the first regional category strategy for packaging, consolidating country-level contracts into three regional agreements.",
+               "Negotiated multi-year supply agreements with the company's top 15 suppliers."]},
+  {"title": "Purchasing Executive", "employer": "Tanjong Trading", "dates": "2005 to 2008"}
+ ],
+ "education": ["Bachelor of Business (Logistics), Nanyang Technological University", "Graduate Diploma in Procurement and Supply, CIPS"]
+}

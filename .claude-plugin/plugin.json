@@ -1,0 +1,14 @@
+{
+  "name": "career-agility-review-my-cv",
+  "displayName": "Review My CV by Career Agility International",
+  "version": "1.0.0",
+  "description": "Reads your CV or resume the way a hiring manager or C-suite headhunter does, then gives you a suggested improved Word CV and a visual assessment report, with an optional comparison against a job description.",
+  "author": {
+    "name": "Career Agility International",
+    "email": "info@CareerAgility.org",
+    "url": "https://www.careeragility.org"
+  },
+  "homepage": "https://www.careeragility.org",
+  "license": "LicenseRef-Career-Agility-Free-Use",
+  "keywords": ["cv", "resume", "career", "job search", "hiring manager", "headhunter", "cv review"]
+}
