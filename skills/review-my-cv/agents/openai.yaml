@@ -2,7 +2,5 @@ interface:
   display_name: Review My CV
   short_description: Your CV, read through the eyes of the person who decides
   default_prompt: Use $review-my-cv to assess my CV and give me a suggested improved CV and a visual assessment report.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
 policy:
   allow_implicit_invocation: true

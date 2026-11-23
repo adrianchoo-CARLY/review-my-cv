@@ -1,6 +1,6 @@
 # Rubric: how a hiring manager reads the original CV
 
-Rate the ORIGINAL CV, never the suggested one. Use 1 (weak), 2 (adequate), 3 (strong), or "unassessed" when the material cannot be read. No weights, totals or percentages. The builder turns the ratings into a verdict.
+Rate the ORIGINAL CV, never the suggested one. Use 1 (weak), 2 (adequate), 3 (strong), or "unassessed" when the material cannot be read. No weights, totals or percentages. The verdict follows from the ratings by the rule in `report-layout.md`.
 
 Rate how well the document presents the career it describes. Rate fit for the target role separately, in the requirements table. A strong functional CV must not lose points because the target asks for broader responsibilities.
 

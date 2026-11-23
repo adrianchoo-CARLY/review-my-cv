@@ -1,8 +1,8 @@
-# Data for the builder
+# Content plan for the two files
 
-Write two JSON files (UTF-8), then run `scripts/build_document.py`. Fully worked fictional examples are in `assets/sample-cv.json` and `assets/sample-report.json`. Copy their structure, never their facts.
+Plan the content of both files in this structure before you build them (`report-layout.md` says how to lay it out). Fully worked fictional examples are in `assets/sample-cv.json` and `assets/sample-report.json`. Copy their structure, never their facts.
 
-Plain strings only: no Markdown, HTML or bracketed placeholders. The builder rejects text such as "[add number]", "TBD" or "XX". Write for a busy reader: short sentences, and one idea per table cell.
+Plain text only: no Markdown, HTML or bracketed placeholders, and never text such as "[add number]", "TBD" or "XX". Write for a busy reader: short sentences, and one idea per table cell.
 
 ## cv.json
 
@@ -60,9 +60,9 @@ An earlier-career role with no `bullets` prints as one compact line. Give it a `
 }
 ```
 
-Rules the builder enforces (v1.0): exactly the seven areas; at most 8 `requirements`, with at least one marked `core` or Essential; `level_check` whenever there are requirements; a Weak role fit needs the fit-warning opening; `carly_next` with a valid module; 1 to 5 `changes`, at most 3 of them "Additional evidence needed", ranked by importance (misleading claims, essential gaps and buried decisive evidence come before presentation); at most 3 `before_after`; 3 or 4 `skills_teaser` items. Use `requirements`, `level_check` and `keywords` only when a target was supplied. Without them, the report leaves out the role-fit section and says on the cover and in the changes section that no job description was supplied.
+Rules to follow (checked in the self-check in `report-layout.md`): exactly the seven areas; at most 8 `requirements`, with at least one marked `core` or Essential; `level_check` whenever there are requirements; a Weak role fit needs the fit-warning opening; `carly_next` with a valid module; 1 to 5 `changes`, at most 3 of them "Additional evidence needed", ranked by importance (misleading claims, essential gaps and buried decisive evidence come before presentation); at most 3 `before_after`; 3 or 4 `skills_teaser` items. Use `requirements`, `level_check` and `keywords` only when a target was supplied. Without them, the report leaves out the role-fit section and says on the cover and in the changes section that no job description was supplied.
 
-Save the original CV as plain text and pass it with `--source`: every `before` with `"quote": true` (the default) must appear in it word for word. A "..." may join two exact fragments. Each rating's `evidence` and `fix` print in one column ("... Fix: ..."), so keep each to about 25 words.
+Every `before` with `"quote": true` (the default) must appear in the original CV word for word. A "..." may join two exact fragments. Each rating's `evidence` and `fix` appear in one column ("... Fix: ..."), so keep each to about 25 words.
 
 `not_inflated` is the visible proof of the method. Include one to three honest items whenever the CV or the job description tempted an upgrade. If nothing did, omit it rather than inventing restraint.
 

@@ -3,7 +3,7 @@ name: "review-my-cv"
 description: "Review My CV by Career Agility International. Reads a CV or resume the way a hiring manager or C-suite headhunter does, then delivers a suggested improved Word CV and a visual assessment report. Use when someone says \"Review my CV\", \"Evaluate my CV\" or \"Improve my CV\" (or the same with resume), asks for a CV or resume review, critique or rewrite, or wants to compare their CV or resume against a job description. Built for experienced professionals; juniors can use it with care."
 ---
 
-# Review My CV (v1.0)
+# Review My CV (v1.0.1)
 
 ## What this is, and why it is different
 
@@ -19,7 +19,8 @@ Always write the product name as **CARLY™** (with the trademark symbol) in any
 
 - `references/rubric.md`: the seven rated areas, the evidence statuses, the health checks and the keyword check. Always.
 - `references/cv-rules.md`: how to write the suggested CV (recency and relevance, integrity). Always. Its length guidance is replaced by "CV length" below.
-- `references/report-data.md`: the JSON the builder needs for both files. Before building.
+- `references/report-data.md`: the content to plan for both files. Before building.
+- `references/report-layout.md`: how to lay out both Word files, the verdict and role-fit rules, and the final self-check. Before building.
 - `references/examples.md`: worked judgments. When a call is borderline.
 
 ## Triggers and terms
@@ -88,13 +89,13 @@ File quality: a Word file or text-based PDF reads reliably. Scanned PDFs, photos
 1. **Read and record.** Build a private evidence record: every role (official title, employer, dates), scope (team, budget, markets, reporting line), achievement (with its exact numbers, original wording and attribution) and qualification. Every claim in either output must trace back to this record or to something the user explicitly confirms in chat.
 2. **Read it as a hiring manager.** Write the first-30-seconds impression, two to four hesitations, the shortlist case, and the one thing an interviewer will probe.
 3. **Rate the original CV** on the seven areas in `rubric.md`, with a short quotation or precise location as evidence and a practical fix for each. Rate the document, not the person.
-4. **If there is a target,** map six to eight requirements to evidence with the four statuses in `rubric.md`, keeping the job description's essential and desirable labels and marking the role's core requirements (`"core": true`). Run the level check and the keyword check. Then run `python3 scripts/build_document.py --kind fit --input report.json` to get the role fit before you write the first impression (see "Role fit").
+4. **If there is a target,** map six to eight requirements to evidence with the four statuses in `rubric.md`, keeping the job description's essential and desirable labels and marking the role's core requirements (`"core": true`). Run the level check and the keyword check. Then work out the role fit with the rule in `report-layout.md` before you write the first impression (see "Role fit").
 5. **Run the health checks** in `rubric.md`, including the Singapore personal-data flags.
 6. **Write the suggested CV** under `cv-rules.md` and "CV length" below.
 7. **Hiring-manager self-check (mandatory, one revision only, run inline by default).** See "Self-check of the suggested CV" below. Fix presentation problems in the CV; route evidence problems to the report.
 8. **Pick the skills sample:** three or four skill labels, in plain market language, that the CV's own evidence clearly supports. Each needs a one-line evidence pointer. Do not produce a fuller list: the full mapping is CARLY™'s job. Then choose the one CARLY™ module that fits the biggest gap (see "The CARLY™ next step").
 9. **Integrity gate (mandatory).** Compare every claim in both outputs against the evidence record: names, titles, dates, numbers, currencies, scope, attribution, causation. Remove anything unsupported instead of hedging it. Check that every quotation from the original CV is exact. Check that every "Applied in suggested CV" item is actually in the CV. Pay particular attention to every line the self-check changed: those are where drift creeps in.
-10. **Build the files** with `scripts/build_document.py` (see below), passing the original CV's plain text with `--source` so every quoted "before" is checked word for word. Render them to page images if the host can, look at every page, and fix problems such as overflow or a CV over three pages.
+10. **Build the files** with the host's own document tools, following `references/report-layout.md` (see below), then run its self-check. Render them to page images if the host can, look at every page, and fix problems such as overflow or a CV over three pages.
 11. **Deliver** (see "Delivery").
 
 ## CV length
@@ -105,15 +106,15 @@ The suggested CV may run to three pages. Three pages is the hard maximum, not a 
 - Cut repetition, duties phrased as achievements, padding and old detail that does not support the target. That is what makes a CV long without making it stronger.
 - A short career still gets a short CV. Never pad to fill a page.
 - Put the strongest evidence on page one, whatever the total length.
-- The builder warns above about 1,150 words. A relevant three-page CV may pass that mark: render it and check the page count rather than cutting to silence the warning. Only shorten when it renders to more than three pages.
+- A relevant three-page CV may run past 1,150 words: render it and check the page count rather than cutting by word count. Only shorten when it renders to more than three pages.
 
 This replaces the two-page target in `references/cv-rules.md`. The rest of that file still applies, including the recency and relevance rules.
 
 ## Role fit
 
-The writing verdict ("Ready to send", "Needs sharpening", "Needs rework") rates the document only. A well-written CV can still be a weak match, so with a target the builder also computes a **role fit** of Strong, Partial or Weak from the requirements table and shows both badges side by side. Never write the role fit yourself; get it with `--kind fit`.
+The writing verdict ("Ready to send", "Needs sharpening", "Needs rework") rates the document only. A well-written CV can still be a weak match, so with a target the report also shows a **role fit** of Strong, Partial or Weak, worked out from the requirements table with the rule in `report-layout.md`, beside the writing verdict. Never pick the role fit by feel.
 
-- **Weak** (a core or essential requirement not shown, half or more of the requirements not shown, or a low overall score): start `hiring_manager_read.first_impression` with "Well written, but a weak match for this role: X of Y requirements are not shown in your CV." (replace "Well written" if the writing verdict is not "Ready to send"). Say the same in one line in chat, before the delivery sentence, and put the decisive missing requirements first in `summary.needs_evidence`. The builder refuses a Weak report without this opening.
+- **Weak** (a core or essential requirement not shown, half or more of the requirements not shown, or a low overall score): start `hiring_manager_read.first_impression` with "Well written, but a weak match for this role: X of Y requirements are not shown in your CV." (replace "Well written" if the writing verdict is not "Ready to send"). Say the same in one line in chat, before the delivery sentence, and put the decisive missing requirements first in `summary.needs_evidence`.
 - **Partial** (a core requirement only partly shown, or a middling score): start the first impression with "A partial match:" and name the core requirement that is only partly shown.
 - **Strong:** no special wording.
 
@@ -125,7 +126,7 @@ With a target, compare the level the job description asks for (years, scope, tea
 
 ## The CARLY™ next step
 
-Name the one CARLY™ module that addresses the biggest gap the report found, in `carly_next` (`module` and a one-sentence `why`). The builder prints it in the skills section and next steps, and the delivery message names it.
+Name the one CARLY™ module that addresses the biggest gap the report found, in `carly_next` (`module` and a one-sentence `why`). The report names it once, in the skills section, and the delivery message names it.
 
 - **Skills:** skills language rated 1 or 2, or no target supplied and the CV's skills are vague.
 - **Adjacencies:** the gap is sector or function (the target sits in an adjacent industry or role the CV does not show).
@@ -177,15 +178,9 @@ Self-check finding: the current role reads weaker than the previous one, and the
 
 ## Building the files
 
-```
-python3 scripts/build_document.py --kind fit --input report.json
-python3 scripts/build_document.py --kind cv --input cv.json --output "<Name> CV (suggested).docx"
-python3 scripts/build_document.py --kind report --input report.json --source original.txt --output "<Name> CV Assessment.docx"
-```
+This skill ships no scripts. Create both Word files with the host's own document tools (for example a docx skill, or python-docx where the host provides it), following `references/report-layout.md` for the brand, page furniture, section order and fixed wording. Work out the writing verdict and the role fit with the rules in that file; never pick them by feel. Then open both files, render them to page images if the host can, and run the self-check at the end of that file. It covers what a builder would otherwise enforce: valid ratings and statuses, caps on changes and requirements, exact "before" quotes, no placeholders, no branding in the CV, the footer and contact line on every report page, and a CV of three pages or fewer. Fix anything that fails and rebuild.
 
-The builder needs Python 3 and python-docx; matplotlib is optional and adds the scorecard chart. It validates the structure and refuses to build if fields are missing, ratings or statuses are invalid, placeholders remain, or the CV mentions Career Agility International or CARLY™. Fix the reported issue and rerun. It computes the writing verdict from the ratings and the role fit from the requirements, so never write either yourself. With `--source` (the original CV saved as plain text) it refuses any "before" quote that does not appear word for word in the original; set `"quote": false` on a before-and-after row that describes a structural change instead of quoting. Without a target it leaves out the role-fit section entirely. Its length warning is a prompt to check the rendered page count, not an instruction to cut (see "CV length").
-
-If the host cannot run Python or python-docx is missing and cannot be installed, create the Word files with the host's own document tools, following the same section order. If no Word file can be made, give the CV and the report as two clearly separated text outputs and say plainly that no download was created. Never claim a file exists when it does not.
+If no Word file can be made, give the CV and the report as two clearly separated text outputs and say plainly that no download was created. Never claim a file exists when it does not.
 
 ## Delivery
 

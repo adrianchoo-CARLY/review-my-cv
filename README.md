@@ -14,7 +14,7 @@ Say **"Review my CV"**, **"Evaluate my CV"** or **"Improve my CV"** (resume work
 ## What it runs, sends and stores
 
 - It reads the CV and job description you supply in the conversation. Nothing is sent to Career Agility International or any other service.
-- It runs a bundled Python script (`skills/review-my-cv/scripts/build_document.py`) inside Claude's own code environment to lay out the two Word files. The script needs `python-docx`; `matplotlib` is optional and adds a chart. If `python-docx` is missing, Claude may install it from the standard Python package index. The script makes no network calls.
+- The plugin contains instructions and reference files only, with no scripts. Claude creates the two Word files with its own document tools, following the layout guide in `skills/review-my-cv/references/report-layout.md`. The plugin makes no network calls.
 - It stores nothing after the conversation, apart from the files it gives you.
 - The report ends with one optional mention of CARLY™, Career Agility International's separate AI career agent, with a link. Review My CV never starts CARLY™ or shares your CV with it unless you ask.
 

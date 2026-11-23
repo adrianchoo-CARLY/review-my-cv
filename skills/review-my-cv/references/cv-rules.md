@@ -2,7 +2,7 @@
 
 ## Shape and length
 
-- Two pages is the target and three pages is the hard maximum. Recruiters and headhunters rarely read past page three, so a longer CV works against the candidate. The builder warns above about 1,150 words. Cut repetition, duties and old detail before cutting relevant evidence.
+- Two pages is the target and three pages is the hard maximum. Recruiters and headhunters rarely read past page three, so a longer CV works against the candidate. Cut repetition, duties and old detail before cutting relevant evidence.
 - Single column, reverse chronological order, the official job titles, no tables or graphics. No photo, NRIC or FIN number, date of birth, marital status, race or religion.
 - Sections, in order: name, optional headline, contact line, Profile, Key skills (optional), Professional experience, Earlier career (optional), Education, Professional qualifications, and other sections only if the source supports them.
 - No Career Agility International or CARLY™ branding, coaching notes, questions, placeholders or ratings anywhere in the CV.
